@@ -12,3 +12,5 @@ while True:
     for i in pygame.event.get():
         if i.type == pygame.QUIT:
             sys.exit()
+
+# git test
