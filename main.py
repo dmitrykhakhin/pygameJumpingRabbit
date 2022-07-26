@@ -28,4 +28,15 @@ while True:
         if i.type == pygame.QUIT:
             sys.exit()
 
+    screen.fill(LIGHT_BLUE)
+    screen.blit(surf_player, rect_player)
+    pygame.display.update()
+
+    keys = pygame.key.get_pressed()
+
+    if keys[pygame.K_LEFT] and rect_player.left > 0:
+        rect_player.x -= 3
+    elif keys[pygame.K_RIGHT] and rect_player.right < WINDOW_WIDTH:
+        rect_player.x += 3
+
     clock.tick(30)
